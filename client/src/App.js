@@ -27,8 +27,8 @@ class App extends Component {
             </nav>
 
             <hr/>
-            <Route exact path="/todos" render={()=><TodoBox url='https://salty-caverns-11463.herokuapp.com/api/todos' pollInterval={2000} />} />
-            <Route exact path="/comments" render={()=><CommentBox url='https://salty-caverns-11463.herokuapp.com/api/comments' pollInterval={2000} />} />
+            <Route exact path="/todos" render={()=><TodoBox url='https://nameless-peak-45207.herokuapp.com/api/todos' pollInterval={2000} />} />
+            <Route exact path="/comments" render={()=><CommentBox url='https://nameless-peak-45207.herokuapp.com/api/comments' pollInterval={2000} />} />
           </div>
         </Router>
       </div>

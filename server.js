@@ -183,12 +183,6 @@ router.route('/comments')
 // Use our router configuration when we call / api
 app.use('/api', router);
 
-// // The "catchall" handler: for any request that doesn't
-// // match one above, send back React's index.html file.
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname+'/client/public/index.html'));
-// });
-
 // starts the server and listens for requests
 app.listen(port, function() {
   console.log(`api running on port ${port}`);
