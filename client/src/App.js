@@ -17,8 +17,10 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to LISHA</h1>
-          <span>TODO list sharing</span>
         </header>
+        <p className="App-intro">
+          Todo List Sharing. You can share your todolist when you get stack. Happy to share.
+        </p>
         <Router>
           <div>
             <nav>
