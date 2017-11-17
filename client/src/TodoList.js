@@ -26,7 +26,6 @@ class TodoList extends Component {
       <Table responsive>
         <thead>
           <tr>
-            <th>#</th>
             <th>Author</th>
             <th>Title</th>
             <th>Description</th>

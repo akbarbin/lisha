@@ -14,6 +14,7 @@ var TodoSchema = new Schema({
   status: String,
   assign_to: String,
   estimated_duration: Number,
+  real_duration: Number,
   type: String
 })
 

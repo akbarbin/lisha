@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {
+  Switch,
   BrowserRouter as Router,
   Route,
   Link
@@ -9,6 +10,7 @@ import {
 
 import CommentBox from './CommentBox';
 import TodoBox from './TodoBox';
+import TodoDetailBox from './TodoDetailBox';
 
 class App extends Component {
   render() {
@@ -29,8 +31,11 @@ class App extends Component {
             </nav>
 
             <hr/>
-            <Route exact path="/todos" render={()=><TodoBox url='https://nameless-peak-45207.herokuapp.com/api/todos' pollInterval={2000} />} />
-            <Route exact path="/comments" render={()=><CommentBox url='https://nameless-peak-45207.herokuapp.com/api/comments' pollInterval={2000} />} />
+            <Switch>
+              <Route exact path="/todos" render={()=><TodoBox url='https://nameless-peak-45207.herokuapp.com/api/todos' pollInterval={2000} />} />
+              <Route exact path='/todos/:todo_id' component={TodoDetailBox}/>
+              <Route exact path="/comments" render={()=><CommentBox url='https://nameless-peak-45207.herokuapp.com/api/comments' pollInterval={2000} />} />
+            </Switch>
           </div>
         </Router>
       </div>

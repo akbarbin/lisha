@@ -128,6 +128,7 @@ router.route('/comments')
       todo.assign_to = req.body.assign_to;
       todo.estimated_duration = req.body.estimated_duration;
       todo.type = req.body.type;
+      todo.real_duration = req.body.real_duration;
 
       todo.save(function(err) {
         if (err)
@@ -161,6 +162,7 @@ router.route('/comments')
         (req.body.assign_to) ? todo.assign_to = req.body.assign_to : null;
         (req.body.estimated_duration) ? todo.estimated_duration = req.body.estimated_duration : null;
         (req.body.type) ? todo.type = req.body.type : null;
+        (req.body.real_duration) ? todo.real_duration = req.body.real_duration : null;
 
         // save todo
         todo.save(function(err) {

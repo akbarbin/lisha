@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import marked from 'marked';
+import { Link } from 'react-router-dom';
 import { FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
 
 class Todo extends Component {
@@ -86,9 +87,10 @@ class Todo extends Component {
   render() {
     return (
       <tr>
-        <td>{this.props._id}</td>
         <td>{this.props.author}</td>
-        <td>{this.props.title}</td>
+        <td>
+          <Link to={`/todos/${this.props.uniqueID}`}>{this.props.title}</Link>
+        </td>
         <td>{this.props.description}</td>
         <td>{this.props.assign_to}</td>
         <td>{this.props.estimated_duration}</td>
